@@ -44,9 +44,7 @@ the original value as intended. A more typical approach might involve logarithms
 to find the exponent directly or a different condition for stopping the loop.
 
 Precision loss: Converting double to long ((long) x == x) to check if x is an integer value can be problematic
-for very large double values due to precision loss. However, in the context of JavaScript code generation, this is likely intended to
-simplify the representation of numbers that are effectively integers,
-and the precision loss might not be a practical concern given the specific use case.
+for very large double values due to precision loss. However, in the context of JavaScript code generation, this is likely intended to simplify the representation of numbers that are effectively integers, and the precision loss might not be a practical concern given the specific use case.
 
 Negative number handling: The code correctly adds a space before a negative number if the last character was a - to avoid generating --,
 which could be interpreted as a decrement operator in JavaScript. This is a sensible precaution.
